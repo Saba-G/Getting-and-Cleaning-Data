@@ -77,7 +77,7 @@ colnames(act_final) <- col_all
 # So I want a tidy data set that is sorted by activity and gives me all 30 subjects
 # for each activity and all average measurements of mean() and std() for each 
 # of these subjects. So the data set will be 6(activities)x30(subject)=180 rows long 
-# and 81 columns wide (activity, subject & average of 79 variables on mean() and std())
+# and 80 columns wide (activity, subject & average of all variables on mean() and std())
 
 # Summarize average by activity per subject in a tidy data set
 df_noLab <- act_df[-80]
@@ -128,6 +128,7 @@ df_means <- ddply(df_noLab, V1.2~V1.1,summarise,
 colnames(df_means)[1] <- "Activity"
 colnames(df_means)[2] <- "Subject"
 tidy_data <- df_means
+tidy_data
 
 # Write this new data set to a txt file
 new_file <- write.table(tidy_data, file="tidydata_Saba.txt", row.names=FALSE)
