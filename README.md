@@ -55,7 +55,7 @@ This assignment wanted me to ‘create a second, independent tidy data set with 
 
 So what I need is a tidy data set that is sorted by activity and gives me all 30 subjects for each activity and all average measurements of ‘mean()’ and ‘std()’ for each of these subjects. So the tidy  data set will be 6(activities) by 30(subjects) = 180 rows long.  And 80 columns wide (activity, subject and all variables on mean and std).
 
-I summarized the avarege by activity per subject in a new data set and give the columns a clearer definition (/name).  Then I rename the first two columns (activity and subject). 
-So this script returns a new tidy data set. 
+I summarized the average by activity per subject in a new data set and give the columns a clearer definition (/name).  Then I rename the first two columns (activity and subject). 
+So finally this script returns a new tidy data set. 
 
 I write this  new data set to a txt file with ‘write.table()’, so that the file can be opened in R by using ‘read.table()’ and selecting the option 'header=TRUE’.
